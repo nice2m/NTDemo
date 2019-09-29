@@ -7,8 +7,16 @@
 //
 
 #import "UIKitViewController.h"
+#import "CustomTransitionViewController.h"
+#import "UIPresentationControllerDemo.h"
+
+
+static NSString * kCellReuseId = @"kCellReuseId";
 
 @interface UIKitViewController ()
+
+@property (nonatomic, strong)NSArray * dataList;
+@property (nonatomic, strong)NTControllerTransitionAnimator * animator;
 
 @end
 
@@ -17,35 +25,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellReuseId];
+    
+    self.dataList = @[
+    @"转场动画-TransitionAnimatingDelegate",
+    ];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.dataList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseId forIndexPath:indexPath];
+    cell.textLabel.text = self.dataList[indexPath.row];
     return cell;
 }
-*/
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    CustomTransitionViewController *vc = [[CustomTransitionViewController alloc] init];
+    vc.transitioningDelegate = self.animator;
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    [self.navigationController presentViewController:vc animated:YES completion:^{
+            //
+    }];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+#pragma mark - TransitionAnimator
+- (NTControllerTransitionAnimator *)animator
+{
+    if (!_animator)
+    {
+        _animator = [[NTControllerTransitionAnimator alloc] init];
+    }
+    return _animator;
+}
+
+
+#pragma mark -
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

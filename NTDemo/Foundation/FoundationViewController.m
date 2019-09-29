@@ -22,6 +22,26 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self perciseTest];
+}
+
+#pragma mark -
+
+- (void)perciseTest
+{
+    
+    
+    CGFloat aNum = 12.4595;
+    // round  roundf 以小数点后一位，四舍五入 收为整数; 12.42 => 12.0   12.88 => 13.0
+    
+    NSString * testStr = [NSString stringWithFormat:@"%.3f",round(aNum)];
+    
+    NSInteger longNum = 1004;
+    NSLog(@"%f",round(longNum));
+    
+    NSLog(@"%@",testStr);
+    
 }
 
 #pragma mark - Table view data source

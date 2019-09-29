@@ -2,8 +2,8 @@
 //  NSBundle+debugClassInfo.m
 //  JLCClient
 //
-//  Created by Ganjiuhui on 9/21/19.
-//  Copyright © 2019 ganjiuhui. All rights reserved.
+//  Created by xxx on 9/21/19.
+//  Copyright © 2019 xxx. All rights reserved.
 //
 
 #import "NSBundle+debugClassInfo.h"
@@ -14,7 +14,7 @@
 
 @implementation NSBundle (debugClassInfo)
 
-+ (NSArray <Class> *)jlc_bundleOwnClassesInfo {
++ (NSArray <Class> *)nt_bundleOwnClassesInfo {
     
     NSMutableArray *resultArray = [NSMutableArray array];
     
@@ -37,7 +37,7 @@
     return resultArray.mutableCopy;
 }
 
-+ (NSArray <NSString *> *)jlc_bundleAllClassesInfo {
++ (NSArray <NSString *> *)nt_bundleAllClassesInfo {
     
     NSMutableArray *resultArray = [NSMutableArray new];
 
@@ -60,5 +60,51 @@
     
     return resultArray.mutableCopy;
 }
+
++ (NSArray <NSString *> *)nt_classMethodList:(NSString *)className
+{
+    NSMutableArray * rtArr = [NSMutableArray array];
+    u_int count;
+    Method* methods = class_copyMethodList(NSClassFromString(className), &count);
+    for (int i = 0; i < count; i ++) {
+        SEL name = method_getName(methods[i]);
+        NSString* strName = [NSString stringWithCString:sel_getName(name) encoding:NSUTF8StringEncoding];
+//        NSLog(@"method: %@",strName);
+        [rtArr addObject:strName];
+    }
+    return rtArr;
+}
+
++ (NSArray <NSString *> *)nt_classPropertyList:(NSString *)className
+{
+    NSMutableArray * rtArr = [NSMutableArray array];
+
+    u_int count;
+    objc_property_t* pList = class_copyPropertyList(NSClassFromString(className), &count);
+    for (int i = 0; i < count; i ++) {
+        const char* name = property_getName(pList[i]);
+        NSString* strName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+//        NSLog(@"preperty: %@",strName);
+        [rtArr addObject:strName];
+    }
+    return rtArr;
+
+}
+
++ (NSArray <NSString *> *)nt_classIvarsList:(NSString *)className
+{
+    NSMutableArray * rtArr = [NSMutableArray array];
+    u_int count;
+    Ivar* ivars = class_copyIvarList(NSClassFromString(className), &count);
+    for (const Ivar*p = ivars; p < ivars+count; ++p) {
+        Ivar const ivar = *p;
+        NSString* name = [NSString stringWithUTF8String:ivar_getName(ivar)];
+//        NSLog(@"name: %@",name);
+        [rtArr addObject:name];
+
+    }
+    return rtArr;
+}
+                                                    
 @end
 

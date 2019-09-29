@@ -14,4 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NTControllerTransitionAnimator : NSObject<UIViewControllerTransitioningDelegate>
+
+@end
+
+@interface NTControllerAnimatedTransition : NSObject<UIViewControllerAnimatedTransitioning>
+
+@property (nonatomic, strong)UIView *transitionBgView;
+
+@end
+
 NS_ASSUME_NONNULL_END

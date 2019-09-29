@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor purpleColor];
+    
+    UILabel * lbl = [UILabel new];
+    lbl.textAlignment = NSTextAlignmentCenter;
+    lbl.textColor = [UIColor redColor];
+    lbl.font = [UIFont systemFontOfSize:16 weight:UIFontWeightRegular];
+    lbl.text = @"天下武功，为快不破";
+    
+    lbl.frame = CGRectMake(0, 64, 200, 64);
+    [self.view addSubview:lbl];
+
 }
 
 /*
@@ -28,5 +39,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
