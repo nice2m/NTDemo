@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1292E2452CE810FA8669174C /* libPods-NTDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 098F54CC073CA9932AD71A3F /* libPods-NTDemoTests.a */; };
+		770D87412340A782001BC09F /* NTEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873A2340A782001BC09F /* NTEmptyView.m */; };
+		770D87422340A782001BC09F /* UIView+NTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873B2340A782001BC09F /* UIView+NTExtension.m */; };
+		770D87432340A782001BC09F /* NTBaseEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873C2340A782001BC09F /* NTBaseEmptyView.m */; };
 		77389AED233DB23300D6E415 /* CustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77389AEC233DB23300D6E415 /* CustomTransitionViewController.m */; };
 		775A30252331CFDF00932731 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 775A30242331CFDF00932731 /* AppDelegate.m */; };
-		775A30282331CFDF00932731 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775A30272331CFDF00932731 /* ViewController.m */; };
 		775A302B2331CFDF00932731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775A30292331CFDF00932731 /* Main.storyboard */; };
 		775A302D2331CFE100932731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775A302C2331CFE100932731 /* Assets.xcassets */; };
 		775A30302331CFE100932731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775A302E2331CFE100932731 /* LaunchScreen.storyboard */; };
@@ -24,6 +27,8 @@
 		777836972339EAD3008176D3 /* DemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777836962339EAD3008176D3 /* DemoController.m */; };
 		77DA6895233C9AEC004313AB /* UIPresentationControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DA6894233C9AEC004313AB /* UIPresentationControllerDemo.m */; };
 		77E75C90233865C7005A9958 /* NSBundle+debugClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E75C8F233865C6005A9958 /* NSBundle+debugClassInfo.m */; };
+		A51D0EF9BC199A1325D9EAA3 /* libPods-NTDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDB5C64D4720136FE9F71D6 /* libPods-NTDemo.a */; };
+		C01E1A509BA689CFACB839FA /* libPods-NTDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A576BEC95350B8F32AB5123B /* libPods-NTDemoUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +49,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098F54CC073CA9932AD71A3F /* libPods-NTDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31DA84F9685A3B8E420C4C20 /* Pods-NTDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemo.debug.xcconfig"; path = "Target Support Files/Pods-NTDemo/Pods-NTDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		68AEB523B181E819E91D7515 /* Pods-NTDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-NTDemoUITests/Pods-NTDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7032250201159EEF386E20F3 /* Pods-NTDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemoTests.release.xcconfig"; path = "Target Support Files/Pods-NTDemoTests/Pods-NTDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		770D873A2340A782001BC09F /* NTEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEmptyView.m; sourceTree = "<group>"; };
+		770D873B2340A782001BC09F /* UIView+NTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NTExtension.m"; sourceTree = "<group>"; };
+		770D873C2340A782001BC09F /* NTBaseEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTBaseEmptyView.m; sourceTree = "<group>"; };
+		770D873D2340A782001BC09F /* NTEmptyPlaceHolderConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEmptyPlaceHolderConfig.h; sourceTree = "<group>"; };
+		770D873E2340A782001BC09F /* NTBaseEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTBaseEmptyView.h; sourceTree = "<group>"; };
+		770D873F2340A782001BC09F /* NTEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEmptyView.h; sourceTree = "<group>"; };
+		770D87402340A782001BC09F /* UIView+NTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NTExtension.h"; sourceTree = "<group>"; };
 		77389AEB233DB23300D6E415 /* CustomTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransitionViewController.h; sourceTree = "<group>"; };
 		77389AEC233DB23300D6E415 /* CustomTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionViewController.m; sourceTree = "<group>"; };
 		775A30202331CFDF00932731 /* NTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775A30232331CFDF00932731 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		775A30242331CFDF00932731 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		775A30262331CFDF00932731 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		775A30272331CFDF00932731 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		775A302A2331CFDF00932731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		775A302C2331CFE100932731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		775A302F2331CFE100932731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +94,11 @@
 		77DA6897233CB253004313AB /* NTDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTDef.h; sourceTree = "<group>"; };
 		77E75C8E233865C6005A9958 /* NSBundle+debugClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+debugClassInfo.h"; sourceTree = "<group>"; };
 		77E75C8F233865C6005A9958 /* NSBundle+debugClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+debugClassInfo.m"; sourceTree = "<group>"; };
+		A4B02699CA0FC75F4D830C60 /* Pods-NTDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-NTDemoTests/Pods-NTDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A576BEC95350B8F32AB5123B /* libPods-NTDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BD989F8F75C6375B27298E /* Pods-NTDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-NTDemoUITests/Pods-NTDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDDB5C64D4720136FE9F71D6 /* libPods-NTDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NTDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD938BBB11F65FB6708CFC4 /* Pods-NTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NTDemo.release.xcconfig"; path = "Target Support Files/Pods-NTDemo/Pods-NTDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51D0EF9BC199A1325D9EAA3 /* libPods-NTDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1292E2452CE810FA8669174C /* libPods-NTDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,15 +122,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01E1A509BA689CFACB839FA /* libPods-NTDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D43F12440AD4537B0EEB7CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31DA84F9685A3B8E420C4C20 /* Pods-NTDemo.debug.xcconfig */,
+				CFD938BBB11F65FB6708CFC4 /* Pods-NTDemo.release.xcconfig */,
+				A4B02699CA0FC75F4D830C60 /* Pods-NTDemoTests.debug.xcconfig */,
+				7032250201159EEF386E20F3 /* Pods-NTDemoTests.release.xcconfig */,
+				68AEB523B181E819E91D7515 /* Pods-NTDemoUITests.debug.xcconfig */,
+				C2BD989F8F75C6375B27298E /* Pods-NTDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		770D87352340A680001BC09F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				775A30562331CFF400932731 /* AppDelegate */,
+				775A305A2331D36E00932731 /* UIKit */,
+				775A30552331CFE900932731 /* Foundation */,
+				775A305B2331D37B00932731 /* Other */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		770D87362340A6A7001BC09F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				775A302C2331CFE100932731 /* Assets.xcassets */,
+				775A30312331CFE100932731 /* Info.plist */,
+				770D87372340A6E5001BC09F /* View */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		770D87372340A6E5001BC09F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				775A302E2331CFE100932731 /* LaunchScreen.storyboard */,
+				775A30292331CFDF00932731 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		770D87382340A756001BC09F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				770D87392340A774001BC09F /* View */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		770D87392340A774001BC09F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				770D873E2340A782001BC09F /* NTBaseEmptyView.h */,
+				770D873C2340A782001BC09F /* NTBaseEmptyView.m */,
+				770D873D2340A782001BC09F /* NTEmptyPlaceHolderConfig.h */,
+				770D873F2340A782001BC09F /* NTEmptyView.h */,
+				770D873A2340A782001BC09F /* NTEmptyView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		773347FA233B584800832EF6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				770D87382340A756001BC09F /* Vendor */,
 				77E75C8B23386571005A9958 /* Debug */,
 				77E75C8A23386564005A9958 /* Category */,
 			);
@@ -123,6 +210,8 @@
 				775A303B2331CFE100932731 /* NTDemoTests */,
 				775A30462331CFE100932731 /* NTDemoUITests */,
 				775A30212331CFDF00932731 /* Products */,
+				2D43F12440AD4537B0EEB7CD /* Pods */,
+				9E903A543CB85F931E389579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,18 +228,9 @@
 		775A30222331CFDF00932731 /* NTDemo */ = {
 			isa = PBXGroup;
 			children = (
+				770D87352340A680001BC09F /* Module */,
 				773347FA233B584800832EF6 /* Extension */,
-				775A30562331CFF400932731 /* AppDelegate */,
-				775A305A2331D36E00932731 /* UIKit */,
-				775A30552331CFE900932731 /* Foundation */,
-				775A305B2331D37B00932731 /* Other */,
-				775A30262331CFDF00932731 /* ViewController.h */,
-				775A30272331CFDF00932731 /* ViewController.m */,
-				775A30292331CFDF00932731 /* Main.storyboard */,
-				775A302C2331CFE100932731 /* Assets.xcassets */,
-				775A302E2331CFE100932731 /* LaunchScreen.storyboard */,
-				775A30312331CFE100932731 /* Info.plist */,
-				775A30322331CFE100932731 /* main.m */,
+				770D87362340A6A7001BC09F /* Resource */,
 			);
 			path = NTDemo;
 			sourceTree = "<group>";
@@ -187,6 +267,7 @@
 			children = (
 				775A30232331CFDF00932731 /* AppDelegate.h */,
 				775A30242331CFDF00932731 /* AppDelegate.m */,
+				775A30322331CFE100932731 /* main.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -257,8 +338,20 @@
 		77E75C8D23386597005A9958 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				770D87402340A782001BC09F /* UIView+NTExtension.h */,
+				770D873B2340A782001BC09F /* UIView+NTExtension.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9E903A543CB85F931E389579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDDB5C64D4720136FE9F71D6 /* libPods-NTDemo.a */,
+				098F54CC073CA9932AD71A3F /* libPods-NTDemoTests.a */,
+				A576BEC95350B8F32AB5123B /* libPods-NTDemoUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +361,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775A304C2331CFE100932731 /* Build configuration list for PBXNativeTarget "NTDemo" */;
 			buildPhases = (
+				0F9C3FF73C8D49CE353BCF33 /* [CP] Check Pods Manifest.lock */,
 				775A301C2331CFDF00932731 /* Sources */,
 				775A301D2331CFDF00932731 /* Frameworks */,
 				775A301E2331CFDF00932731 /* Resources */,
@@ -285,6 +379,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775A304F2331CFE100932731 /* Build configuration list for PBXNativeTarget "NTDemoTests" */;
 			buildPhases = (
+				EF5F9880844F722579FC2D7D /* [CP] Check Pods Manifest.lock */,
 				775A30342331CFE100932731 /* Sources */,
 				775A30352331CFE100932731 /* Frameworks */,
 				775A30362331CFE100932731 /* Resources */,
@@ -303,6 +398,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775A30522331CFE100932731 /* Build configuration list for PBXNativeTarget "NTDemoUITests" */;
 			buildPhases = (
+				9334577D465FF41CAC47B43F /* [CP] Check Pods Manifest.lock */,
 				775A303F2331CFE100932731 /* Sources */,
 				775A30402331CFE100932731 /* Frameworks */,
 				775A30412331CFE100932731 /* Resources */,
@@ -386,6 +482,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F9C3FF73C8D49CE353BCF33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NTDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9334577D465FF41CAC47B43F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NTDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5F9880844F722579FC2D7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NTDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		775A301C2331CFDF00932731 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -393,14 +558,16 @@
 			files = (
 				77389AED233DB23300D6E415 /* CustomTransitionViewController.m in Sources */,
 				777836912339EA87008176D3 /* HuabanController.m in Sources */,
+				770D87422340A782001BC09F /* UIView+NTExtension.m in Sources */,
 				775A30642331D3D600932731 /* FoundationViewController.m in Sources */,
 				77DA6895233C9AEC004313AB /* UIPresentationControllerDemo.m in Sources */,
 				775A305E2331D39300932731 /* OtherViewController.m in Sources */,
-				775A30282331CFDF00932731 /* ViewController.m in Sources */,
 				775A30612331D3AB00932731 /* UIKitViewController.m in Sources */,
 				77E75C90233865C7005A9958 /* NSBundle+debugClassInfo.m in Sources */,
 				777836972339EAD3008176D3 /* DemoController.m in Sources */,
+				770D87412340A782001BC09F /* NTEmptyView.m in Sources */,
 				775A30332331CFE100932731 /* main.m in Sources */,
+				770D87432340A782001BC09F /* NTBaseEmptyView.m in Sources */,
 				777836942339EAA4008176D3 /* HuabanPresentController.m in Sources */,
 				775A30252331CFDF00932731 /* AppDelegate.m in Sources */,
 			);
@@ -571,6 +738,7 @@
 		};
 		775A304D2331CFE100932731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DA84F9685A3B8E420C4C20 /* Pods-NTDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,7 +747,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NTDemo/Debug/Framework",
 				);
-				INFOPLIST_FILE = NTDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NTDemo/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,6 +761,7 @@
 		};
 		775A304E2331CFE100932731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD938BBB11F65FB6708CFC4 /* Pods-NTDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -601,7 +770,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NTDemo/Debug/Framework",
 				);
-				INFOPLIST_FILE = NTDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NTDemo/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,6 +784,7 @@
 		};
 		775A30502331CFE100932731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B02699CA0FC75F4D830C60 /* Pods-NTDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -634,6 +804,7 @@
 		};
 		775A30512331CFE100932731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7032250201159EEF386E20F3 /* Pods-NTDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -653,6 +824,7 @@
 		};
 		775A30532331CFE100932731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68AEB523B181E819E91D7515 /* Pods-NTDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6825EKA6L;
@@ -671,6 +843,7 @@
 		};
 		775A30542331CFE100932731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2BD989F8F75C6375B27298E /* Pods-NTDemoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6825EKA6L;
