@@ -11,6 +11,9 @@
 		770D87412340A782001BC09F /* NTEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873A2340A782001BC09F /* NTEmptyView.m */; };
 		770D87422340A782001BC09F /* UIView+NTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873B2340A782001BC09F /* UIView+NTExtension.m */; };
 		770D87432340A782001BC09F /* NTBaseEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D873C2340A782001BC09F /* NTBaseEmptyView.m */; };
+		77147EB6234C222C007C3167 /* NTDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77147EB5234C222C007C3167 /* NTDemoModel.m */; };
+		77147EB9234C22A1007C3167 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77147EB8234C22A1007C3167 /* BaseTableViewController.m */; };
+		77147EBE234C30DC007C3167 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 77147EBD234C30DC007C3167 /* Father.m */; };
 		77389AED233DB23300D6E415 /* CustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77389AEC233DB23300D6E415 /* CustomTransitionViewController.m */; };
 		775A30252331CFDF00932731 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 775A30242331CFDF00932731 /* AppDelegate.m */; };
 		775A302B2331CFDF00932731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775A30292331CFDF00932731 /* Main.storyboard */; };
@@ -60,6 +63,12 @@
 		770D873E2340A782001BC09F /* NTBaseEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTBaseEmptyView.h; sourceTree = "<group>"; };
 		770D873F2340A782001BC09F /* NTEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEmptyView.h; sourceTree = "<group>"; };
 		770D87402340A782001BC09F /* UIView+NTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NTExtension.h"; sourceTree = "<group>"; };
+		77147EB4234C222C007C3167 /* NTDemoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTDemoModel.h; sourceTree = "<group>"; };
+		77147EB5234C222C007C3167 /* NTDemoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTDemoModel.m; sourceTree = "<group>"; };
+		77147EB7234C22A1007C3167 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		77147EB8234C22A1007C3167 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		77147EBC234C30DC007C3167 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		77147EBD234C30DC007C3167 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		77389AEB233DB23300D6E415 /* CustomTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransitionViewController.h; sourceTree = "<group>"; };
 		77389AEC233DB23300D6E415 /* CustomTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionViewController.m; sourceTree = "<group>"; };
 		775A30202331CFDF00932731 /* NTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,13 +148,13 @@
 				68AEB523B181E819E91D7515 /* Pods-NTDemoUITests.debug.xcconfig */,
 				C2BD989F8F75C6375B27298E /* Pods-NTDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		770D87352340A680001BC09F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				77147EB3234C21F7007C3167 /* Model */,
 				775A30562331CFF400932731 /* AppDelegate */,
 				775A305A2331D36E00932731 /* UIKit */,
 				775A30552331CFE900932731 /* Foundation */,
@@ -191,6 +200,34 @@
 				770D873A2340A782001BC09F /* NTEmptyView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		77147EB3234C21F7007C3167 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77147EB4234C222C007C3167 /* NTDemoModel.h */,
+				77147EB5234C222C007C3167 /* NTDemoModel.m */,
+				77147EB7234C22A1007C3167 /* BaseTableViewController.h */,
+				77147EB8234C22A1007C3167 /* BaseTableViewController.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77147EBA234C30C0007C3167 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77147EBB234C30C7007C3167 /* InheritModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77147EBB234C30C7007C3167 /* InheritModel */ = {
+			isa = PBXGroup;
+			children = (
+				77147EBC234C30DC007C3167 /* Father.h */,
+				77147EBD234C30DC007C3167 /* Father.m */,
+			);
+			path = InheritModel;
 			sourceTree = "<group>";
 		};
 		773347FA233B584800832EF6 /* Extension */ = {
@@ -289,6 +326,7 @@
 		775A305B2331D37B00932731 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				77147EBA234C30C0007C3167 /* Model */,
 				775A305C2331D39300932731 /* OtherViewController.h */,
 				775A305D2331D39300932731 /* OtherViewController.m */,
 			);
@@ -420,7 +458,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = Ganjiuhui;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					775A301F2331CFDF00932731 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -562,6 +600,7 @@
 				775A30642331D3D600932731 /* FoundationViewController.m in Sources */,
 				77DA6895233C9AEC004313AB /* UIPresentationControllerDemo.m in Sources */,
 				775A305E2331D39300932731 /* OtherViewController.m in Sources */,
+				77147EB9234C22A1007C3167 /* BaseTableViewController.m in Sources */,
 				775A30612331D3AB00932731 /* UIKitViewController.m in Sources */,
 				77E75C90233865C7005A9958 /* NSBundle+debugClassInfo.m in Sources */,
 				777836972339EAD3008176D3 /* DemoController.m in Sources */,
@@ -569,7 +608,9 @@
 				775A30332331CFE100932731 /* main.m in Sources */,
 				770D87432340A782001BC09F /* NTBaseEmptyView.m in Sources */,
 				777836942339EAA4008176D3 /* HuabanPresentController.m in Sources */,
+				77147EB6234C222C007C3167 /* NTDemoModel.m in Sources */,
 				775A30252331CFDF00932731 /* AppDelegate.m in Sources */,
+				77147EBE234C30DC007C3167 /* Father.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +788,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NTDemo/Debug/Framework",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NTDemo/Extension/Debug/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NTDemo/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -770,6 +812,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NTDemo/Debug/Framework",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NTDemo/Extension/Debug/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NTDemo/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

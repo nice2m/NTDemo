@@ -1,30 +1,24 @@
 //
-//  UIKitViewController.m
+//  BaseTableViewController.m
 //  NTDemo
 //
-//  Created by   on 9/18/19.
+//  Created by   on 10/8/19.
 //  Copyright © 2019  . All rights reserved.
 //
 
-#import "UIKitViewController.h"
-#import "CustomTransitionViewController.h"
-#import "UIPresentationControllerDemo.h"
+#import "BaseTableViewController.h"
 
 
-static NSString * kCellReuseId = @"kCellReuseId";
+static NSString * kCellReuseID = @"kCellReuseID";
 
-@interface UIKitViewController ()
-
-@property (nonatomic, strong)NSArray * dataList;
-@property (nonatomic, strong)NTControllerTransitionAnimator * animator;
+@interface BaseTableViewController ()
 
 @end
 
-@implementation UIKitViewController
+@implementation BaseTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,11 +26,14 @@ static NSString * kCellReuseId = @"kCellReuseId";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellReuseId];
-    
-    self.dataList = @[
-    @"转场动画-TransitionAnimatingDelegate",
-    ];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellReuseID];
+    [self demoConfig];
+}
+
+#pragma mark - config
+
+- (void)demoConfig
+{
 }
 
 #pragma mark - Table view data source
@@ -46,44 +43,29 @@ static NSString * kCellReuseId = @"kCellReuseId";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataList.count;
+    return self.dataSource.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseID forIndexPath:indexPath];
+    NTDemoModel * demo = self.dataSource[indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseId forIndexPath:indexPath];
-    cell.textLabel.text = self.dataList[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld-%@",indexPath.row,demo.demoName];
+    
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NTDemoModel * demo = self.dataSource[indexPath.row];
+    id ret = (demo.actionBlock ? demo.actionBlock(nil) : nil);
     
-    CustomTransitionViewController *vc = [[CustomTransitionViewController alloc] init];
-    vc.transitioningDelegate = self.animator;
-    vc.modalPresentationStyle = UIModalPresentationCustom;
-    [self.navigationController presentViewController:vc animated:YES completion:^{
-            //
-    }];
-//    [self.navigationController pushViewController:vc animated:YES];
+    nt_debug(@"%@", ret);
 }
 
 
-#pragma mark - TransitionAnimator
-- (NTControllerTransitionAnimator *)animator
-{
-    if (!_animator)
-    {
-        _animator = [[NTControllerTransitionAnimator alloc] init];
-    }
-    return _animator;
-}
-
-
-#pragma mark -
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,5 +109,15 @@ static NSString * kCellReuseId = @"kCellReuseId";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSMutableArray *)dataSource
+{
+    if (!_dataSource)
+    {
+        _dataSource = [NSMutableArray array];
+        
+    }
+    return _dataSource;
+}
 
 @end

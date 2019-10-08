@@ -2,15 +2,16 @@
 //  FoundationViewController.h
 //  NTDemo
 //
-//  Created by Ganjiuhui on 9/18/19.
-//  Copyright © 2019 Ganjiuhui. All rights reserved.
+//  Created by   on 9/18/19.
+//  Copyright © 2019  . All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FoundationViewController : UITableViewController
+@interface FoundationViewController : BaseTableViewController
 
 @end
 

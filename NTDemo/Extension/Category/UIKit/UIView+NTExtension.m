@@ -2,7 +2,7 @@
 //  UIView+NTExtension.m
 //  RumHeadLine
 //
-//  Created by Ganjiuhui on 2019/8/10.
+//  Created by   on 2019/8/10.
 //  Copyright © 2019 Wu. All rights reserved.
 //
 

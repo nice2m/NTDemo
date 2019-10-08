@@ -2,7 +2,7 @@
 //  NTEmptyView.h
 //  RumHeadLine
 //
-//  Created by Ganjiuhui on 2019/8/9.
+//  Created by   on 2019/8/9.
 //  Copyright © 2019 Wu. All rights reserved.
 //
 

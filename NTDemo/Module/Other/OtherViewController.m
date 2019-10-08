@@ -2,11 +2,12 @@
 //  OtherViewController.m
 //  NTDemo
 //
-//  Created by Ganjiuhui on 9/18/19.
-//  Copyright © 2019 Ganjiuhui. All rights reserved.
+//  Created by   on 9/18/19.
+//  Copyright © 2019  . All rights reserved.
 //
 
 #import "OtherViewController.h"
+#import "Father.h"
 
 @interface OtherViewController ()
 
@@ -24,17 +25,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+- (void)demoConfig
+{
+    // 继承 self class & super class控制
+    NTDemoModel * model = [NTDemoModel demoName:@"继承 self class & super class控制" actionBlock:^id _Nullable(id  _Nullable parameter) {
+        //
+        [[Son alloc]init];
+        return nil;
+    }];
+    [self.dataSource addObject:model];
+    
+}
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

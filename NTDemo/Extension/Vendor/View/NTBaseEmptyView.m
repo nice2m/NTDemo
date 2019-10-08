@@ -2,7 +2,7 @@
 //  NTBaseEmptyView.m
 //  RumHeadLine
 //
-//  Created by Ganjiuhui on 2019/8/8.
+//  Created by   on 2019/8/8.
 //  Copyright © 2019 Wu. All rights reserved.
 //
 

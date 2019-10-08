@@ -2,14 +2,13 @@
 //  FoundationViewController.m
 //  NTDemo
 //
-//  Created by Ganjiuhui on 9/18/19.
-//  Copyright © 2019 Ganjiuhui. All rights reserved.
+//  Created by   on 9/18/19.
+//  Copyright © 2019  . All rights reserved.
 //
 
 #import "FoundationViewController.h"
 
 @interface FoundationViewController ()
-
 @end
 
 @implementation FoundationViewController
@@ -24,6 +23,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self perciseTest];
+    
+    
 }
 
 #pragma mark -
@@ -31,29 +32,28 @@
 - (void)perciseTest
 {
     
-    
-    CGFloat aNum = 12.4595;
-    // round  roundf 以小数点后一位，四舍五入 收为整数; 12.42 => 12.0   12.88 => 13.0
-    
-    NSString * testStr = [NSString stringWithFormat:@"%.3f",round(aNum)];
-    
-    NSInteger longNum = 1004;
-    NSLog(@"%f",round(longNum));
-    
-    NSLog(@"%@",testStr);
-    
-}
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    NTDemoModel * demo = [[NTDemoModel alloc] init];
+    
+    demo.actionBlock = ^id _Nullable(id  _Nullable parameter) {
+        //
+        
+        CGFloat aNum = 12.4595;
+        // round  roundf 以小数点后一位，四舍五入 收为整数; 12.42 => 12.0   12.88 => 13.0
+        
+        NSString * testStr = [NSString stringWithFormat:@"%.3f",round(aNum)];
+        
+        NSInteger longNum = 1004;
+        NSLog(@"%f",round(longNum));
+        NSLog(@"%@",testStr);
+        NSLog(@"%@",testStr);
+        return nil;
+    };
+    
+    demo.demoName = @"round  roundf 以小数点后一位，四舍五入 收为整数; 12.42 => 12.0   12.88 => 13.0";
+    [self.dataSource addObject:demo];
+    
 }
 
 /*
